@@ -1,0 +1,78 @@
+{
+  "build": {
+    "content": [{
+        "src": "structured",
+        "files": [
+          "**.yml"
+        ],
+        "exclude": [
+          "toc.yml"
+        ],
+        "dest": "api"
+      },
+      {
+        "src": "structured",
+        "files": [
+          "toc.md",
+          "toc.yml"
+        ],
+        "exclude": [],
+        "dest": "api/{product-name}"
+      },
+      {
+        "src": ".",
+        "files": [
+          "index.md"
+        ],
+        "exclude": [
+          "README.md"
+        ],
+        "dest": "api/{product-name}"
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "_themes/**",
+          "_themes.pdf/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      }
+    ],
+    "resource": [{
+      "files": [
+        "**/*.png",
+        "**/*.jpg"
+      ],
+      "exclude": [
+        "**/obj/**",
+        "**/includes/**",
+        "_themes/**",
+        "_themes.pdf/**"
+      ]
+    }],
+    "pairing": [
+      {
+        "contentFolder": "structured",
+        "overwriteFragmentsFolder": "authored"
+      }
+    ], 
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/rest-ref-template/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "feedback_system": "None"
+    },
+    "fileMetadata": {},
+    "template": [],
+    "dest": "rest-ref-template",
+    "markdownEngineName": "markdig"
+  }
+}
