@@ -1,0 +1,18 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.store.getinventory
+name: get Inventory
+service: petstore
+groupName: store
+apiVersion: 1.0.0
+produces:
+- application/json
+paths:
+- content: GET https://petstore.swagger.io/v2/store/inventory
+uriParameters: []
+responses:
+- name: 200 OK
+  description: successful operation
+requestHeader: []
+definitions: []
+examples: []
+security: []

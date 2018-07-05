@@ -1,0 +1,84 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.pet.findpetsbytags
+name: find Pets By Tags
+service: petstore
+groupName: pet
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: GET https://petstore.swagger.io/v2/pet/findByTags?tags={tags}
+uriParameters:
+- name: tags
+  in: query
+  isRequired: true
+  description: Tags to filter by
+  types:
+  - uid: array
+responses:
+- name: 200 OK
+  description: successful operation
+  types:
+  - uid: Pet
+    isArray: true
+- name: 400 Bad Request
+  description: Invalid tag value
+requestHeader: []
+definitions:
+- name: Pet
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: category
+    description: ''
+    types:
+    - uid: Category
+  - name: name
+    description: ''
+    types:
+    - uid: string
+  - name: photoUrls
+    description: ''
+    types:
+    - uid: string
+      isArray: true
+  - name: tags
+    description: ''
+    types:
+    - uid: Tag
+      isArray: true
+  - name: status
+    description: pet status in the store
+    types:
+    - uid: available
+    - uid: pending
+    - uid: sold
+    typesTitle: enum
+- name: Category
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: name
+    description: ''
+    types:
+    - uid: string
+- name: Tag
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: name
+    description: ''
+    types:
+    - uid: string
+examples: []
+security: []

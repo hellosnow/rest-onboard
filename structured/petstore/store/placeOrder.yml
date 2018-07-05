@@ -1,0 +1,88 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.store.placeorder
+name: place Order
+service: petstore
+groupName: store
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: POST https://petstore.swagger.io/v2/store/order
+uriParameters: []
+responses:
+- name: 200 OK
+  description: successful operation
+  types:
+  - uid: Order
+- name: 400 Bad Request
+  description: Invalid Order
+requestBody:
+- parameters:
+  - name: id
+    in: body
+    description: ''
+    types:
+    - uid: integer
+  - name: petId
+    in: body
+    description: ''
+    types:
+    - uid: integer
+  - name: quantity
+    in: body
+    description: ''
+    types:
+    - uid: integer
+  - name: shipDate
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: status
+    in: body
+    description: Order Status
+    types:
+    - uid: placed
+    - uid: approved
+    - uid: delivered
+    typesTitle: enum
+  - name: complete
+    in: body
+    description: ''
+    types:
+    - uid: boolean
+requestHeader: []
+definitions:
+- name: Order
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: petId
+    description: ''
+    types:
+    - uid: integer
+  - name: quantity
+    description: ''
+    types:
+    - uid: integer
+  - name: shipDate
+    description: ''
+    types:
+    - uid: string
+  - name: status
+    description: Order Status
+    types:
+    - uid: placed
+    - uid: approved
+    - uid: delivered
+    typesTitle: enum
+  - name: complete
+    description: ''
+    types:
+    - uid: boolean
+examples: []
+security: []

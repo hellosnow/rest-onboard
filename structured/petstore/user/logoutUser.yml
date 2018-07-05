@@ -1,0 +1,19 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.user.logoutuser
+name: logout User
+service: petstore
+groupName: user
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: GET https://petstore.swagger.io/v2/user/logout
+uriParameters: []
+responses:
+- name: Other Status Codes
+  description: successful operation
+requestHeader: []
+definitions: []
+examples: []
+security: []

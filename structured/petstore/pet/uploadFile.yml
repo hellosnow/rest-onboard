@@ -1,0 +1,44 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.pet.uploadfile
+name: upload File
+service: petstore
+groupName: pet
+apiVersion: 1.0.0
+consumes:
+- multipart/form-data
+produces:
+- application/json
+paths:
+- content: POST https://petstore.swagger.io/v2/pet/{petId}/uploadImage
+uriParameters:
+- name: petId
+  in: path
+  isRequired: true
+  description: ID of pet to update
+  types:
+  - uid: integer
+  format: int64
+responses:
+- name: 200 OK
+  description: successful operation
+  types:
+  - uid: ApiResponse
+requestHeader: []
+definitions:
+- name: ApiResponse
+  kind: object
+  properties:
+  - name: code
+    description: ''
+    types:
+    - uid: integer
+  - name: type
+    description: ''
+    types:
+    - uid: string
+  - name: message
+    description: ''
+    types:
+    - uid: string
+examples: []
+security: []

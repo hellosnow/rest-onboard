@@ -1,0 +1,96 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.user.createuser
+name: create User
+service: petstore
+groupName: user
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: POST https://petstore.swagger.io/v2/user
+uriParameters: []
+responses:
+- name: Other Status Codes
+  description: successful operation
+requestBody:
+- parameters:
+  - name: id
+    in: body
+    description: ''
+    types:
+    - uid: integer
+  - name: username
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: firstName
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: lastName
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: email
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: password
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: phone
+    in: body
+    description: ''
+    types:
+    - uid: string
+  - name: userStatus
+    in: body
+    description: User Status
+    types:
+    - uid: integer
+requestHeader: []
+definitions:
+- name: User
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: username
+    description: ''
+    types:
+    - uid: string
+  - name: firstName
+    description: ''
+    types:
+    - uid: string
+  - name: lastName
+    description: ''
+    types:
+    - uid: string
+  - name: email
+    description: ''
+    types:
+    - uid: string
+  - name: password
+    description: ''
+    types:
+    - uid: string
+  - name: phone
+    description: ''
+    types:
+    - uid: string
+  - name: userStatus
+    description: User Status
+    types:
+    - uid: integer
+examples: []
+security: []

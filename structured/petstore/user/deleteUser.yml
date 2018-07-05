@@ -1,0 +1,27 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.user.deleteuser
+name: delete User
+service: petstore
+groupName: user
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: DELETE https://petstore.swagger.io/v2/user/{username}
+uriParameters:
+- name: username
+  in: path
+  isRequired: true
+  description: The name that needs to be deleted
+  types:
+  - uid: string
+responses:
+- name: 400 Bad Request
+  description: Invalid username supplied
+- name: 404 Not Found
+  description: User not found
+requestHeader: []
+definitions: []
+examples: []
+security: []

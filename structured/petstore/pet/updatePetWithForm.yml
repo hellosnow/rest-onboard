@@ -1,0 +1,28 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.pet.updatepetwithform
+name: update Pet With Form
+service: petstore
+groupName: pet
+apiVersion: 1.0.0
+consumes:
+- application/x-www-form-urlencoded
+produces:
+- application/xml
+- application/json
+paths:
+- content: POST https://petstore.swagger.io/v2/pet/{petId}
+uriParameters:
+- name: petId
+  in: path
+  isRequired: true
+  description: ID of pet that needs to be updated
+  types:
+  - uid: integer
+  format: int64
+responses:
+- name: Other Status Codes
+  description: Invalid input
+requestHeader: []
+definitions: []
+examples: []
+security: []

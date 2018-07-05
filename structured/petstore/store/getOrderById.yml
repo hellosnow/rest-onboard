@@ -1,0 +1,62 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.store.getorderbyid
+name: get Order By Id
+service: petstore
+groupName: store
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: GET https://petstore.swagger.io/v2/store/order/{orderId}
+uriParameters:
+- name: orderId
+  in: path
+  isRequired: true
+  description: ID of pet that needs to be fetched
+  types:
+  - uid: integer
+  format: int64
+responses:
+- name: 200 OK
+  description: successful operation
+  types:
+  - uid: Order
+- name: 400 Bad Request
+  description: Invalid ID supplied
+- name: 404 Not Found
+  description: Order not found
+requestHeader: []
+definitions:
+- name: Order
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: petId
+    description: ''
+    types:
+    - uid: integer
+  - name: quantity
+    description: ''
+    types:
+    - uid: integer
+  - name: shipDate
+    description: ''
+    types:
+    - uid: string
+  - name: status
+    description: Order Status
+    types:
+    - uid: placed
+    - uid: approved
+    - uid: delivered
+    typesTitle: enum
+  - name: complete
+    description: ''
+    types:
+    - uid: boolean
+examples: []
+security: []

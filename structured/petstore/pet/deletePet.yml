@@ -1,0 +1,32 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.pet.deletepet
+name: delete Pet
+service: petstore
+groupName: pet
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: DELETE https://petstore.swagger.io/v2/pet/{petId}
+uriParameters:
+- name: petId
+  in: path
+  isRequired: true
+  description: Pet id to delete
+  types:
+  - uid: integer
+  format: int64
+responses:
+- name: 400 Bad Request
+  description: Invalid ID supplied
+- name: 404 Not Found
+  description: Pet not found
+requestHeader:
+- name: api_key
+  in: header
+  types:
+  - uid: string
+definitions: []
+examples: []
+security: []

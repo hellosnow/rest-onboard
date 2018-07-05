@@ -1,0 +1,22 @@
+### YamlMime:RESTOperationGroup
+uid: petstore.swagger.io.v2.petstore.user
+name: user
+apiVersion: 1.0.0
+service: petstore
+operations:
+- uid: petstore.swagger.io.v2.petstore.user.createuser
+  summary: "Create user  \nThis can only be done by the logged in user."
+- uid: petstore.swagger.io.v2.petstore.user.createuserswitharrayinput
+  summary: Creates list of users with given input array
+- uid: petstore.swagger.io.v2.petstore.user.createuserswithlistinput
+  summary: Creates list of users with given input array
+- uid: petstore.swagger.io.v2.petstore.user.deleteuser
+  summary: "Delete user  \nThis can only be done by the logged in user."
+- uid: petstore.swagger.io.v2.petstore.user.getuserbyname
+  summary: Get user by user name
+- uid: petstore.swagger.io.v2.petstore.user.loginuser
+  summary: Logs user into the system
+- uid: petstore.swagger.io.v2.petstore.user.logoutuser
+  summary: Logs out current logged in user session
+- uid: petstore.swagger.io.v2.petstore.user.updateuser
+  summary: "Updated user  \nThis can only be done by the logged in user."

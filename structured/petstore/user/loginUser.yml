@@ -1,0 +1,40 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.user.loginuser
+name: login User
+service: petstore
+groupName: user
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: GET https://petstore.swagger.io/v2/user/login?username={username}&password={password}
+uriParameters:
+- name: username
+  in: query
+  isRequired: true
+  description: The user name for login
+  types:
+  - uid: string
+- name: password
+  in: query
+  isRequired: true
+  description: The password for login in clear text
+  types:
+  - uid: string
+responses:
+- name: 200 OK
+  headers:
+  - name: X-Rate-Limit
+    value: integer
+  - name: X-Expires-After
+    value: string
+  description: successful operation
+  types:
+  - uid: string
+- name: 400 Bad Request
+  description: Invalid username/password supplied
+requestHeader: []
+definitions: []
+examples: []
+security: []

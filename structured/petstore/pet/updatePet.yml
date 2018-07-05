@@ -1,0 +1,119 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.pet.updatepet
+name: update Pet
+service: petstore
+groupName: pet
+apiVersion: 1.0.0
+consumes:
+- application/json
+- application/xml
+produces:
+- application/xml
+- application/json
+paths:
+- content: PUT https://petstore.swagger.io/v2/pet
+uriParameters: []
+responses:
+- name: 400 Bad Request
+  description: Invalid ID supplied
+- name: 404 Not Found
+  description: Pet not found
+- name: Other Status Codes
+  description: Validation exception
+requestBody:
+- parameters:
+  - name: id
+    in: body
+    description: ''
+    types:
+    - uid: integer
+  - name: category
+    in: body
+    description: ''
+    types:
+    - uid: Category
+  - name: name
+    in: body
+    isRequired: true
+    description: ''
+    types:
+    - uid: string
+  - name: photoUrls
+    in: body
+    isRequired: true
+    description: ''
+    types:
+    - uid: string
+      isArray: true
+  - name: tags
+    in: body
+    description: ''
+    types:
+    - uid: Tag
+      isArray: true
+  - name: status
+    in: body
+    description: pet status in the store
+    types:
+    - uid: available
+    - uid: pending
+    - uid: sold
+    typesTitle: enum
+requestHeader: []
+definitions:
+- name: Category
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: name
+    description: ''
+    types:
+    - uid: string
+- name: Tag
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: name
+    description: ''
+    types:
+    - uid: string
+- name: Pet
+  kind: object
+  properties:
+  - name: id
+    description: ''
+    types:
+    - uid: integer
+  - name: category
+    description: ''
+    types:
+    - uid: Category
+  - name: name
+    description: ''
+    types:
+    - uid: string
+  - name: photoUrls
+    description: ''
+    types:
+    - uid: string
+      isArray: true
+  - name: tags
+    description: ''
+    types:
+    - uid: Tag
+      isArray: true
+  - name: status
+    description: pet status in the store
+    types:
+    - uid: available
+    - uid: pending
+    - uid: sold
+    typesTitle: enum
+examples: []
+security: []

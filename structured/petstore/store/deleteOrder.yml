@@ -1,0 +1,28 @@
+### YamlMime:RESTOperation
+uid: petstore.swagger.io.v2.petstore.store.deleteorder
+name: delete Order
+service: petstore
+groupName: store
+apiVersion: 1.0.0
+produces:
+- application/xml
+- application/json
+paths:
+- content: DELETE https://petstore.swagger.io/v2/store/order/{orderId}
+uriParameters:
+- name: orderId
+  in: path
+  isRequired: true
+  description: ID of the order that needs to be deleted
+  types:
+  - uid: integer
+  format: int64
+responses:
+- name: 400 Bad Request
+  description: Invalid ID supplied
+- name: 404 Not Found
+  description: Order not found
+requestHeader: []
+definitions: []
+examples: []
+security: []
