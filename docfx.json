@@ -17,7 +17,7 @@
           "toc.yml"
         ],
         "exclude": [],
-        "dest": "api/{product-name}"
+        "dest": "api/petstore"
       },
       {
         "src": ".",
@@ -27,7 +27,7 @@
         "exclude": [
           "README.md"
         ],
-        "dest": "api/{product-name}"
+        "dest": "api/petstore"
       },
       {
         "files": [
